@@ -214,16 +214,14 @@
 	font-size: 14px;
 	font-weight: 600;
 	text-transform: uppercase;
-	padding: rem(10) rem(89);
 	line-height: 30px;
-	color: #fff;
-	display: block;
 }
 
 .button-tr {
 	color: $mainDarckColor;
 	border: 1px solid $mainDarckColor;
-	
+	display: block;
+	padding: rem(10) rem(89);
 	@include adaptiveValue(padding-right, 89, 15, 1000, 768, 1);
 	@include adaptiveValue(padding-left, 89, 15, 1000, 768, 1);
 	@media (max-width:$mobile){
@@ -237,4 +235,7 @@
 
 .button-dark {
 	background-color: $mainDarckColor;
+	color: #fff;
+	display: block;
+	padding: rem(10) rem(89);
 }

@@ -2,6 +2,55 @@
 
 //====================================================================================================
 
+.title {
+    @include adaptiveValue("font-size", 36, 24, 1500, 375, 1);
+    color: $mainDarckColor;
+    font-weight: 900;
+     :last-child {
+        color: $actionColor;
+    }
+}
+
+.button-arrow {
+    color: #202020;
+    padding: 0;
+    a {
+        position: relative;
+        padding-left: rem(56);
+        margin-top: rem(10);
+        transition: 0.6s;
+    }
+    ::before {
+        font-size: rem(36);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    @media (any-hover: hover){
+        :hover{
+            color: $actionColor;
+            transition: 0.3s;
+        }
+    }
+}
+
+.img-desct {
+    display: block;
+    @media (max-width:$mobile){
+         display: none; 
+    }
+}
+.img-phone {
+    display: none;
+    @media (max-width:$mobile){
+        display: block; 
+        max-height: 667px;
+        object-fit: cover;
+   }
+}
+
 .main-block {
 
     &__container {
@@ -17,21 +66,6 @@
             height: 100%;
             
         }
-    }
-
-    &__desktop {
-        display: block;
-        @media (max-width:$mobile){
-             display: none; 
-        }
-    }
-    &__phone {
-        display: none;
-        @media (max-width:$mobile){
-            display: block; 
-            max-height: 667px;
-            object-fit: cover;
-       }
     }
 
     &__content {
@@ -88,7 +122,6 @@
 
     &__button {
         text-align: center;
-        
         a {
             line-height: 30px;
             display: block;
@@ -99,11 +132,50 @@
         }
     }
 }
-.title {
+
+.about {
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        @include adaptiveValue("grid-column-gap", 130, 50);
+        @include adaptiveValue(padding-left, 50, 20, 1500, 1000, 1);
+        @include adaptiveValue(padding-right, 50, 20, 1500, 1000, 1);
+        @media (max-width:$mobile){
+            grid-row-gap: rem(30); 
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @media (max-width:$mobile){
+             object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-bottom: rem(30);
+    }
+
+    &__desc {
+        max-width: 500px;
+        margin-bottom: rem(51);
+        @include adaptiveValue("font-size", 18, 16, 1500, 375, 1);
+    }
+
+    &__button {
+    }
 }
-.main-block-title {
-}
-.button {
-}
-.button-dark {
-}
+
+
+
+
+
