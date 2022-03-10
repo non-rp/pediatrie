@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main-block">
+					<div class="main-block__container">
+						<div class="main-block__bg-img"><img class="main-block__desktop" src="@img/main-img.jpg" alt=""> <img class="main-block__phone" src="@img/main-mobile.jpg" alt=""> </div>
+						
+						<div class="main-block__content">
+							<div class="main-block__times">Annual Congress 2021 <span>10-11 Juni</span></div>
+							<h1 class="main-block__title">Pediatric Integrative Medicine</h1>
+							<div class="main-block__sub-title">Building bridges between conventional and complementary medicine</div>
+							<div class="main-block__button button-dark"><a class="button" href="">register</a>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+				<section class="about">
+					<div class="about__container">
+						
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
