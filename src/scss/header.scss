@@ -130,11 +130,13 @@
 			font-weight: 600;
 			color: $mainDarckColor;
 			padding: rem(25);
+			transition: 0.3s;
 			@include adaptiveValue(padding-right, 25, 15, 1100, 880, 1);
 			@include adaptiveValue(padding-left, 25, 15, 1100, 880, 1);
 			@media (any-hover: hover){
 				&:hover{
 					color: $actionColor;
+					transition: 0.3s;
 				}
 			}
 		}
@@ -222,6 +224,7 @@
 	border: 1px solid $mainDarckColor;
 	display: block;
 	padding: rem(10) rem(89);
+	transition: 0.4s;
 	@include adaptiveValue(padding-right, 89, 15, 1000, 768, 1);
 	@include adaptiveValue(padding-left, 89, 15, 1000, 768, 1);
 	@media (max-width:$mobile){
@@ -231,11 +234,29 @@
 		background-color: $mainDarckColor;
 	}
 
+	@media (any-hover: hover){
+		&:hover{
+			color: #fff;
+			border: 1px solid $actionColor;
+			background-color: $actionColor;
+			transition: 0.4s;
+		}
+	}
+
 }
 
 .button-dark {
 	background-color: $mainDarckColor;
 	color: #fff;
 	display: block;
-	padding: rem(10) rem(89);
+	transition: 0.5s;
+	a {
+		padding: rem(10) rem(89);
+	}
+	@media (any-hover: hover){
+		&:hover{
+			background-color: $actionColor;
+			transition: 0.3s;
+		}
+	}
 }

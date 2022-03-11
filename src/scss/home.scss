@@ -11,6 +11,13 @@
     }
 }
 
+.big-title {
+    @include adaptiveValue(font-size, 64, 48, 1500, 375, 1);
+    font-weight: 900;
+    color: $mainDarckColor;
+    text-align: center;
+}
+
 .button-arrow {
     color: #202020;
     padding: 0;
@@ -134,7 +141,7 @@
 }
 
 .about {
-
+    @include adaptiveValue("margin-bottom", 200, 130);
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
