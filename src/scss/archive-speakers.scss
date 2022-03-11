@@ -1,0 +1,47 @@
+.page-archive {
+
+    &__container {
+        display: flex;
+        @include adaptiveValue(padding-left, 50, 20, 1500, 1000, 1);
+        @include adaptiveValue(padding-right, 50, 20, 1500, 1000, 1);
+    }
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 50, 30, 1500, 375, 1);
+    }
+
+    &__sidebar {
+        width: 20%;
+        padding-right: rem(25);
+        
+    }
+
+    &__main {
+        width: 80%;
+    }
+}
+
+.speakers {
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        @media (max-width:$mobile){
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        }
+    }
+
+    &__item {
+        padding: rem(35);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name {
+    }
+
+    &__position {
+    }
+}
