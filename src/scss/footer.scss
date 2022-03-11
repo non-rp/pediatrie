@@ -4,7 +4,7 @@
 
 
 .footer {
-
+    @include adaptiveValue("margin-top", 200, 130);
     &__container {
         @include adaptiveValue(padding-left, 50, 20, 1500, 1000, 1);
         @include adaptiveValue(padding-right, 50, 20, 1500, 1000, 1);

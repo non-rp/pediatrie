@@ -100,6 +100,7 @@ body {
 	// По брейк-поинтам
 	[class*="__container"] {
 		margin: 0 auto;
+		
 		@if ($maxWidthContainer>0) {
 			max-width: rem($maxWidthContainer);
 			box-sizing: content-box;
@@ -136,3 +137,4 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "single-speaker"

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.htm',{
+        "title":"Single Speaker"
+        })
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page"> 
+           <section class="speacker">
+               <div class="speacker__container">
+                    <div class="speacker__back-all button-arrow-back"><a href="" class="button _icon-back-all">All speakers</a></div>
+                    <div class="speacker__content">
+                        <div class="speacker__desc">
+                            <h1 class="speacker__title title">Amanda Tea</h1>
+
+                            Are you ready? We just announced our fill congress lineup of 50 inspiring speakers, 2 full-day workshop tracks, 5 detailed QnA Sessions and a lot of 1v1 Zoom Rooms to meet new amazing people. The event is for doctors interested in conventional and complementary medicine, and beyond. It’s all happening this Juno 10-11 online. Book your spot today.</div>
+                        <div class="speacker__img future-img"> <div class="future-img__overlay"></div>
+                        <img src="@img/future-img-single.jpg" alt=""></div>
+                    </div>
+                </div>
+           </section>
+           <section class="session">
+               <div class="session__container">
+                <h2 class="session__title title">Sessions</h2>
+                    <ul class="session__list">
+                        <li class="session__item"><a href="" class="session__link">Ouverture / Integrative Pediatrics</a> </li>
+                        <li class="session__item"><a href="" class="session__link">Médecine psychosomatique (Gastro/Nephro)</a></li>
+                        <li class="session__item"><a href="" class="session__link">Integrative pediatric oncology</a></li>
+                        <li class="session__item"><a href="" class="session__link">Pleine conscience</a></li>
+                        <li class="session__item"><a href="" class="session__link">Ouverture / Integrative Pediatrics </a></li>
+                        <li class="session__item"><a href="" class="session__link">Médecine psychosomatique (Gastro/Nephro)</a></li>
+                        <li class="session__item"><a href="" class="session__link">Integrative pediatric oncology</a></li>
+                        <li class="session__item"><a href="" class="session__link">Pleine conscience</a></li>
+                    </ul>
+                    
+               </div>
+           </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+</html>

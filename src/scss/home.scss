@@ -141,7 +141,6 @@
 }
 
 .about {
-    @include adaptiveValue("margin-bottom", 200, 130);
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -159,6 +158,7 @@
         object-fit: cover;
         @media (max-width:$mobile){
              object-fit: cover;
+             
         }
     }
 
