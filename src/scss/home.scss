@@ -12,7 +12,7 @@
 }
 
 .big-title {
-    @include adaptiveValue(font-size, 64, 48, 1500, 375, 1);
+    @include adaptiveValue(font-size, 64, 36, 1500, 375, 1);
     font-weight: 900;
     color: $mainDarckColor;
     text-align: center;
@@ -53,7 +53,6 @@
     display: none;
     @media (max-width:$mobile){
         display: block; 
-        max-height: 667px;
         object-fit: cover;
    }
 }
@@ -64,7 +63,9 @@
         position: relative;
         @include adaptiveValue(padding-left, 50, 0, 1500, 1000, 1);
         @include adaptiveValue(padding-right, 50, 0, 1500, 1000, 1);
-        @include adaptiveValue("margin-bottom", 200, 50);
+        @include adaptiveValue("margin-bottom", 200, 50, 1600, 375, 1);
+
+
     }
 
     &__bg-img {
@@ -73,11 +74,15 @@
             height: 100%;
             
         }
+
+        @media (max-width:$mobile){
+            min-height: rem(667); 
+       }
     }
 
     &__content {
         position: absolute;
-        top: rem(60);
+        top: rem(66);
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -85,6 +90,7 @@
         align-items: center;
         width: 100%;
         @media (max-width:$mobile){
+            top: rem(8);
             padding: rem(20);
             text-align: left;
             align-items: start;
@@ -96,12 +102,14 @@
         color: $mainDarckColor;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: rem(20);
+        margin-bottom: rem(39);
+        letter-spacing: 0.05em;
         :last-child {
             color: $actionColor;
         }
         @media (max-width:$mobile){
             text-align: left; 
+            margin-bottom: rem(28);
        }
     }
 
@@ -109,21 +117,26 @@
         @include adaptiveValue(font-size, 64, 48, 1500, 375, 1);
         font-weight: 900;
         color: $mainDarckColor;
-        margin-bottom: rem(20);
+        margin-bottom: rem(33);
         text-align: center;
         @media (max-width:$mobile){
             text-align: left; 
+            line-height: 140%;
+            margin-bottom: rem(19);
        }
     }
 
     &__sub-title {
         font-weight: normal;
         @include adaptiveValue(font-size, 18, 16, 1500, 375, 1);
-        margin-bottom: rem(50);
+        margin-bottom: rem(40);
         max-width: 500px;
         text-align: center;
+        line-height: 140%;
         @media (max-width:$mobile){
              text-align: left; 
+             max-width: rem(280);
+             margin-bottom: rem(28);
         }
     }
 
@@ -137,6 +150,10 @@
             }
             
         }
+
+        @media (max-width:$mobile){
+            width: 100%;
+       }
     }
 }
 
@@ -144,11 +161,12 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        @include adaptiveValue("grid-column-gap", 130, 50);
+        @include adaptiveValue("grid-column-gap", 100, 50);
         @include adaptiveValue(padding-left, 50, 20, 1500, 1000, 1);
         @include adaptiveValue(padding-right, 50, 20, 1500, 1000, 1);
+
         @media (max-width:$mobile){
-            grid-row-gap: rem(30); 
+            grid-row-gap: rem(25); 
         }
     }
 
@@ -156,9 +174,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        max-width: rem(670);
         @media (max-width:$mobile){
              object-fit: cover;
-             
         }
     }
 
@@ -169,12 +187,18 @@
     }
 
     &__title {
-        margin-bottom: rem(30);
+        margin-top: 8px;
+        margin-bottom: rem(33);
+
+        @media (max-width:$mobile){
+           margin-bottom: rem(21);
+        }
     }
 
     &__desc {
         max-width: 500px;
-        margin-bottom: rem(51);
+        margin-bottom: rem(52);
+        line-height: 140%;
         @include adaptiveValue("font-size", 18, 16, 1500, 375, 1);
     }
 

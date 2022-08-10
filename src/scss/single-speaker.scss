@@ -26,7 +26,7 @@
 }
 
 .speacker {
-    @include adaptiveValue("margin-bottom", 50, 100, 1500, 375, 1);
+    @include adaptiveValue("margin-bottom", 53, 100, 1500, 375, 1);
     &__container {
         max-width: rem(1100);
         @include adaptiveValue(padding-left, 50, 20, 1500, 1000, 1);
@@ -34,19 +34,24 @@
     }
 
     &__back-all {
+        @include adaptiveValue("margin-top", 20, 0, 1500, 375, 1);
         @include adaptiveValue("margin-bottom", 50, 20, 1500, 375, 1);
+        font-size: 12px;
+        letter-spacing: -1.2px;
     }
 
     &__content {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-        column-gap: rem(130);
-        align-items: center;
+        column-gap: rem(100);
+        // align-items: center;
     }
 
     &__title {
         font-weight: 700;
-        margin-bottom: rem(30);
+        margin-top: rem(6);
+        margin-bottom: rem(34);
+        font-size: 24px;
     }
 
     &__desc {
@@ -78,6 +83,7 @@
 }
 
 .session {
+    margin-bottom: rem(10);
 
     &__container {
         max-width: rem(1100);
@@ -86,7 +92,8 @@
     }
 
     &__title {
-        @include adaptiveValue("margin-bottom", 50, 40, 1500, 375, 1);
+        font-size: 24px;
+        @include adaptiveValue("margin-bottom", 52, 40, 1500, 375, 1);
     }
 
     &__list {
@@ -95,7 +102,7 @@
     &__item {
         text-decoration: underline;
         &:not(:last-child) {
-            @include adaptiveValue("margin-bottom", 40, 30, 1500, 375, 1);
+            @include adaptiveValue("margin-bottom", 42, 30, 1500, 375, 1);
         }
     }
 

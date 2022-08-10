@@ -14,7 +14,8 @@
 		cursor: pointer;
 		z-index: 5;
 		margin-left: auto;
-		margin-right: rem(20);
+		margin-top: rem(4);
+		// margin-right: rem(20);
 		span,
 		&::before,
 		&::after {
@@ -65,9 +66,11 @@
 	&__container {
 		display: flex;
 		align-items: center;
-		margin-top: 37px;
-		margin-bottom: rem(25);
+		margin-top: rem(28);
+		margin-bottom: rem(17);
 		@media (max-width:$tablet){
+			margin-top: rem(60);
+			margin-bottom: rem(28);
 			padding: 0 rem(20);
 		}
 	}
@@ -78,8 +81,7 @@
 
 	&__menu {
 		flex: 1 1 auto;
-		// padding: 0 0 0 rem(75);
-		@include adaptiveValue(padding-left, 75, 15, 1600, 1080, 1);
+		@include adaptiveValue(padding-left, 76, 15, 1600, 1080, 1);
 	}
 
 	.menu {
@@ -96,6 +98,7 @@
 				 flex-direction: column;
 				 align-items: center;
 				 z-index: 1;
+				 overflow: auto;
 				 @media (max-width:$mobile){
 					  .menu-open & {
 						  left: 0;
@@ -108,20 +111,18 @@
 		&__list {
 			display: flex;
 			justify-content: flex-start;
+
 			@media (max-width:$mobile){
 				  flex-direction: column;
-				//   justify-content: center;
 				  align-items: center;
 				  width: 100%;
-				  margin-bottom: rem(69);
-				  margin-top: rem(166);
+				  margin-bottom: rem(49);
+				  margin-top: rem(145);
 			}
 		}
 
 		&__item {
-			@media (max-width:$mobile){
-				padding: rem(20);
-			}
+			
 			
 		}
 
@@ -131,6 +132,7 @@
 			color: $mainDarckColor;
 			padding: rem(25);
 			transition: 0.3s;
+			display: inline-block;
 			@include adaptiveValue(padding-right, 25, 15, 1100, 880, 1);
 			@include adaptiveValue(padding-left, 25, 15, 1100, 880, 1);
 			@media (any-hover: hover){
@@ -139,15 +141,23 @@
 					transition: 0.3s;
 				}
 			}
+
+			@media (max-width:$mobile){
+				padding: rem(20);
+				line-height: 140%;
+				font-size: 18px;
+			}
 		}
 }
 
 	&__button {
-		@include adaptiveValue(padding-right, 50, 15, 1600, 1080, 1);
-		@include adaptiveValue(padding-left, 50, 15, 1600, 1080, 1);
+		@include adaptiveValue(padding-right, 47, 20, 1600, 1080, 1);
+		@include adaptiveValue(padding-left, 47, 20, 1600, 1080, 1);
+		
 		@media (max-width:$mobile){
 			 width: 100%;
 			 text-align: center; 
+			 margin-bottom: 30px;
 		}
 	}
 
@@ -166,7 +176,7 @@
 		& ul {
 			position: absolute;
 			left: 0;
-			top: 7px;
+			top: 6px;
 		}
 
 		& ul li {
@@ -179,6 +189,7 @@
 			top: 50%;
 			right: 0;
 			transition: 0.3s;
+			transform: translateY(-50%);
 		}
 		  .active {
 			opacity: 1;
@@ -198,7 +209,7 @@
 
 	@media (any-hover: hover){
 		&__lang:hover::after {
-			transform: rotate(-180deg);
+			transform: rotate(-180deg) translateY(50%);
 			transition: 0.3s;
 		}
 	
